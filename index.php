@@ -103,6 +103,7 @@
 
 		<script type="text/javascript">
 			$('.LinkMenu:eq(0)').addClass('SessaoAtual');
+			
 		</script>
 	</body>
 </html>
