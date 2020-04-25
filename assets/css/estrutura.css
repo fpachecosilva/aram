@@ -216,8 +216,24 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 
 /* :Página Home */
 
-/* Página: */
-/* :Página */
+/* Expertises: */
+	.Expertises h1 { position: initial; margin-top: 267px; margin-bottom: 80px; }
+	.Expertises p { text-align: center; }
+	.Expertises .PrimeiraSessao::after { content: ''; width: 1px; height: 34px; background: #FFF; position: absolute; left: 50%; margin-left: -0.5px; bottom: 0 }
+	
+	.Expertises .PrimeiraSessao article { height: 100%; }
+	.Expertises .PrimeiraSessao p { font-size: 1.3rem; line-height: 1.75rem; padding: 0 75px; }
+	.Expertises .PrimeiraSessao p:first-of-type { font-size: 1.5rem; margin-bottom: 20px; font-family: 'OC Rey' }
+	.Expertises .PrimeiraSessao img { width: 16px; -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); margin: auto; margin-top: 75px; }
+
+	.Expertises .SegundaSessao { background-color: var(--secundaria); }
+	.Expertises .SegundaSessao h2 { font-size: 2.8rem; text-align: center; margin-top: 80px; margin-bottom: 25px; }
+	.Expertises .SegundaSessao p:first-of-type { font-size: 1.5rem; } 
+	.Expertises .SegundaSessao span { content: ''; width: 1px; height: 68px; background: #FFF; left: 50%; margin-left: -0.5px; margin: 70px auto; display: block; }
+
+	.Expertises .SegundaSessao .Slider {  }
+
+/* :Expertises */
 
 /* -------------------------------- Versionamento Desktop: -------------------------------- */
 

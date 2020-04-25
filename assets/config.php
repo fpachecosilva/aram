@@ -6,12 +6,18 @@
 -->
 <?
 	$empresa = 'Aram Capital';
-	$url = 'http://previewbsagency.com.br/aram/';
+	
+	// Local
+	$url = 'http://localhost/aram/';
+	
+	// Server
+	// $url = 'http://previewbsagency.com.br/aram/';
+
 	$images = $url.'assets/images/';
 	$Tags = '';
 	
 	// Páginas
-		$Expertises = $url.'pagina.php';
+		$Expertises = $url.'expertises.php';
 		$Sobre = $url.'sobre.php';
 		$Documentos = $url.'contato.php';
 		$Contato = $url.'contato.php';
