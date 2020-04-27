@@ -103,6 +103,15 @@ jQuery(document).ready(function() {
 
 	// Executando versionamentos
 		if(WidthDevice <= 1029) { MobileVersion(); } else { DesktopVersion(); }
+
+		if(WidthDevice <= 1029) { 
+			$('.DesktopItem').css('display','none');
+			$('.MobileItem').css('display','block');
+		} else { 
+			$('.DesktopItem').css('display','block');
+			$('.MobileItem').css('display','none');
+		}
+		
 	// FadeIn da página após o carregamento.
 		$('body').fadeIn('slow');
 	// ScrollTop
@@ -122,5 +131,6 @@ jQuery(document).ready(function() {
 			//
 		}
 		else {}
+		
 
 });
