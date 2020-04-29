@@ -11,16 +11,18 @@
 	</head>
 	<body class="Expertises">
         <?php include 'assets/header.php'; ?>
-        
+                
         <section class="PrimeiraSessao fullscreen-bg" style="background-image: url('<? echo $images ?>montanhas_1.jpg')";>            
-            <div>
-                <h1>Um relacionamento se mantém no dia a dia. <br>Bons resultados também.</h1>
-                <p><strong>Somos uma gestora de patrimônios “boutique style”.</strong></p>
-                <p>
-                    Temos um número de clientes mais exclusivo para poder ter muito tempo para as demandas de cada um deles. É por isso que cada atendimento é personalizado e é desenvolvido de acordo com cada expectativa. É único.
-                </p>
-                <img src="<? echo $images ?>Seta.svg" />
-            </div>            
+            <article>
+                
+                    <h1>Um relacionamento se mantém no dia a dia. <br>Bons resultados também.</h1>
+                    <p class="DesktopText"><strong>Somos uma gestora de patrimônios “boutique style”.</strong></p>
+                    <p>
+                        <span class="DesktopText">Temos um número de clientes mais exclusivo para poder ter muito tempo para as demandas de cada um deles.</span> É por isso que cada atendimento é personalizado e é desenvolvido de acordo com cada expectativa. É único.
+                    </p>
+                    <img src="<? echo $images ?>Seta.svg" />
+                
+            </article>
         </section>
 
         <section class="SegundaSessao">
@@ -40,7 +42,7 @@
                             <span class="Bola"></span>                            
                         </div>    
 
-                        <div>                            
+                        <div class="SliderTexto">                            
                             Conversas e imersão<br> 
                             com o cliente.<br> 
                             Entendimento do modus<br> 
@@ -55,7 +57,7 @@
                             <span class="Bola"></span>                            
                         </div>
 
-                        <div>
+                        <div class="SliderTexto">
                             Análise do cliente<br> 
                             e perfil de risco.
                         </div>
@@ -68,7 +70,7 @@
                             <span class="Bola"></span>
                         </div>
 
-                        <div>
+                        <div class="SliderTexto">
                             Alinhamento do<br> 
                             Mandato: planejamento<br> 
                             e estratégia de alocação
@@ -82,7 +84,7 @@
                             <span class="Bola"></span>
                         </div>
 
-                        <div>
+                        <div class="SliderTexto">
                             Implementação de<br> 
                             solução de<br> 
                             investimento customizada
@@ -96,7 +98,7 @@
                             <span class="Bola"></span>
                         </div>
 
-                        <div>
+                        <div class="SliderTexto">
                             Prestação de contas<br> 
                             Gerenciamento contínuo de risco<br> 
                             Calls e e-mails ao longo do mês<br> 
@@ -136,55 +138,59 @@
         <section class="TerceiraSessao">
             <p class="Destaque">NOSSAS EXPERTISES</p>            
 
-            <div class="Boxes">
+            <article>
+            
+                <div class="Boxes">
 
-                <div class="Box">
-                    <p><strong>Gestão de<br> patrimônios no<br> Brasil e exterior</strong></p>
-                    <p>01</p>
+                    <div class="Box">
+                        <p><strong>Gestão de<br> patrimônios no<br> Brasil e exterior</strong></p>
+                        <p>01</p>
+                    </div>
+
+                    <div class="Box">
+                        <p><strong>Assessoria<br> tributária,<br> sucessória e<br> proteção<br> patrimonial</strong></p>
+                        <p>02</p>
+
+                    </div>
+
+                    <div class="Box">
+                        <p><strong>Assessoria de<br> planejamento<br> corporativo e real<br> estate:</strong></p>
+                        <p>network e guidance<br> para tomada de ação<br> no mercado</p>
+                        <p>03</p>
+                    </div>
+
+                    <div class="Box">
+                        <p><strong>Cliente<br> Experience: </strong></p>
+                        <p>hub de conexões,<br> eventos de incentivo<br> à arte, cultura e<br> filantropia</p>
+                        <p>04</p>
+                    </div>
+
+                    <div class="Box">
+                        <p><strong>Controle, execução e suporte operacional:</strong></p>
+                        <p>controle mensal dos relatórios das instituições<br> e das movimentações,<br> abertura de contas,<br> movimentação e<br> realocações</p>
+                        <p>05</p>
+                    </div>
+
+                    <div class="Box">
+                        <p><strong>Investimentos alternativos:</strong></p>
+                        <p>ilíquidos, ventures e real estate, entre outros</p>
+                        <p>06</p>
+                    </div>
+
+                    <div class="Box">
+                        <p><strong>Investimentos<br> de impacto: </strong></p>
+                        <p>Fazemos e incentivamos,<br> gerando resultados com<br> responsabilidade</p>
+                        <p>07</p>
+                    </div>
+
+                    <div class="Box">
+                        <p><strong>Gerenciamento de risco:</strong></p>
+                        <p>Análise constante e<br> dinâmica do mercado,<br> alinhado com o perfil e<br> objetivos do cliente</p>
+                        <p>08</p>
+                    </div>
                 </div>
 
-                <div class="Box">
-                    <p><strong>Assessoria<br> tributária,<br> sucessória e<br> proteção<br> patrimonial</strong></p>
-                    <p>02</p>
-
-                </div>
-
-                <div class="Box">
-                    <p><strong>Assessoria de<br> planejamento<br> corporativo e real<br> estate:</strong></p>
-                    <p>network e guidance<br> para tomada de ação<br> no mercado</p>
-                    <p>03</p>
-                </div>
-
-                <div class="Box">
-                    <p><strong>Cliente<br> Experience: </strong></p>
-                    <p>hub de conexões,<br> eventos de incentivo<br> à arte, cultura e<br> filantropia</p>
-                    <p>04</p>
-                </div>
-
-                <div class="Box">
-                    <p><strong>Controle, execução e suporte operacional:</strong></p>
-                    <p>controle mensal dos relatórios das instituições<br> e das movimentações,<br> abertura de contas,<br> movimentação e<br> realocações</p>
-                    <p>05</p>
-                </div>
-
-                <div class="Box">
-                    <p><strong>Investimentos alternativos:</strong></p>
-                    <p>ilíquidos, ventures e real estate, entre outros</p>
-                    <p>06</p>
-                </div>
-
-                <div class="Box">
-                    <p><strong>Investimentos<br> de impacto: </strong></p>
-                    <p>Fazemos e incentivamos,<br> gerando resultados com<br> responsabilidade</p>
-                    <p>07</p>
-                </div>
-
-                <div class="Box">
-                    <p><strong>Gerenciamento de risco:</strong></p>
-                    <p>Análise constante e<br> dinâmica do mercado,<br> alinhado com o perfil e<br> objetivos do cliente</p>
-                    <p>08</p>
-                </div>
-            </div>
+            </article>
         
             <div class="Praticas">
                 <p class="Destaque">NOSSAS PRÁTICAS</p>

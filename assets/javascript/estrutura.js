@@ -97,7 +97,6 @@ jQuery(document).ready(function() {
 					}
 				});
 
-
 		}
 	// :Funções executadas apenas na versão Mobile
 
@@ -110,6 +109,30 @@ jQuery(document).ready(function() {
 		} else { 
 			$('.DesktopItem').css('display','block');
 			$('.MobileItem').css('display','none');
+		}
+
+
+		if(WidthDevice <= 450) {
+			$('.DesktopText').css('display','none');
+
+			if($('body').hasClass('Expertises')) { 
+				$('.Slider').slick({
+					infinite: false,
+					slidesToShow: 1,
+					fade: false,
+					arrows: true,
+					cssEase: 'linear'
+				});
+			}
+
+			// $('.Boxes').slick({
+			// 	infinite: false,
+			// 	slidesToShow: 1,
+			// 	fade: false,
+			// 	arrows: false,				
+			// 	cssEase: 'linear'
+			// });	
+
 		}
 		
 	// FadeIn da página após o carregamento.
