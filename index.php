@@ -4,7 +4,7 @@
 	<?php 
 		include 'assets/config.php';
  
-		$tituloPagina = 'Home - '. $empresa;
+		$tituloPagina = 'Home - '. $empresa;		
 	?>
 <title><? echo $tituloPagina ?></title>
 	<?php include 'assets/head.php'; ?>
@@ -101,8 +101,8 @@
 	
 		<?php include 'assets/footer.php'; ?>
 
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			$('.LinkMenu:eq(0)').addClass('SessaoAtual');
-		</script>
+		</script> -->
 	</body>
 </html>

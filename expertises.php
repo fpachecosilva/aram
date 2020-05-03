@@ -4,7 +4,8 @@
 	<?php 
 		include 'assets/config.php';
  
-		$tituloPagina = 'Expertises - '. $empresa;
+        $tituloPagina = 'Expertises - '. $empresa;
+        $urlPagina = $Expertises;
 	?>
 <title><? echo $tituloPagina ?></title>
 	<?php include 'assets/head.php'; ?>

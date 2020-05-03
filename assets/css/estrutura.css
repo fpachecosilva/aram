@@ -108,8 +108,22 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	::-moz-selection {background: var(--principal); color:#FFF; text-shadow: 0px 2px 1px rgba(0,0,0,0.2);}
 /* Seleção: */
 
+/* Magnific Popup: */ 	
+	.mfp-fade.mfp-bg { opacity: 0; -webkit-transition: all 0.15s ease-out; -moz-transition: all 0.15s ease-out; transition: all 0.15s ease-out; }	
+	.mfp-fade.mfp-bg.mfp-ready { opacity: 0.8; }	
+	.mfp-fade.mfp-bg.mfp-removing { opacity: 0; }	
+	.mfp-fade.mfp-wrap .mfp-content { opacity: 0; -webkit-transition: all 0.5s ease-out; -moz-transition: all 0.5s ease-out; transition: all 0.5s ease-out; }	
+	.mfp-fade.mfp-wrap.mfp-ready .mfp-content { opacity: 1; }
+	.mfp-fade.mfp-wrap.mfp-removing .mfp-content { opacity: 0; }
+	.mfp-iframe { background-color: #fff!important; }
+
+	.mfp-close { color: var(--secundaria)!important; }
+	.mfp-iframe-holder .mfp-close { top: 0!important }
+	.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close { right: 6px!important; }
+/* :Magnific Popup */
+
 /* Efeitos de transição: */
-	a, header, #AbrirMenu div, nav {-webkit-transition: all var(--tempo); -moz-transition: all var(--tempo); -ms-transition: all var(--tempo); -o-transition: all var(--tempo); transition: all var(--tempo);}
+	a, header, #AbrirMenu div, nav, {-webkit-transition: all var(--tempo); -moz-transition: all var(--tempo); -ms-transition: all var(--tempo); -o-transition: all var(--tempo); transition: all var(--tempo);}
 /* :Efeitos de transição */
 
 /* Animações: */
@@ -152,10 +166,12 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 /* Header: */
 	header {position: absolute; top: 0; left: 0; width: 100%; z-index: 3;}
 	header article {position: relative; z-index: 10; padding: 0;}
+	
 		header a {font-size: 0.8rem; color: #FFF; text-transform: uppercase; letter-spacing: 2.1px;}
 
 		#Logo {display: block; float: left;}
 		#Logo img {width: 100%;}
+
 /* :Header */
 
 /* Footer: */
@@ -267,7 +283,7 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	.Expertises .TerceiraSessao p.Destaque { font-size: 1.8rem; letter-spacing: 0.4rem; color: var(--secundaria); font-family: 'OC Rey'; }
 
 	.Expertises .TerceiraSessao .Boxes { margin: 95px 0 70px 0; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; row-gap: 51px; justify-items: center; }
-	.Expertises .TerceiraSessao .Box { width: 198px; height: 243px; border: 1px solid #FFF; position: relative; margin: auto; padding-left: 27px; padding-top: 33px; padding-right: 12px; box-sizing: border-box; }
+	.Expertises .TerceiraSessao .Box { width: 198px; height: 243px; border: 1px solid #FFF; position: relative; margin: auto; padding-left: 27px; padding-top: 33px; padding-right: 12px; box-sizing: border-box; overflow: hidden; }
 	.Expertises .TerceiraSessao .Box p strong { font-size: 0.93rem; line-height: 1.5rem; display: block; margin-bottom: 5px }
 	.Expertises .TerceiraSessao .Box p { font-family: 'OC Rey'; font-size: 0.87rem; line-height: 1.12rem; text-align: left; z-index: 2; position: relative; display: block; }
 	.Expertises .TerceiraSessao .Box p:last-of-type { color: #C1997D; font-family: 'OC Rey'; font-size: 9.3rem; font-weight: bold; position: absolute; left: 0; bottom:60px; margin: 0; z-index: 0; }
@@ -282,6 +298,59 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	.Expertises .QuartaSessao a { text-transform: uppercase; letter-spacing: 0.4rem; font-size: 1.8rem; color: #FFF; font-family: 'OC Rey'; float: right; }
 	.Expertises .QuartaSessao .DesktopItem { background-image: url('../images/Grafismo09.svg'); width: 100%; height: 124px; background-position-x: -306px; background-repeat: no-repeat; }
 /* :Expertises */
+
+/* Sobre: */
+	.Sobre {}
+	.Sobre .PrimeiraSessao article { height: 100%; box-sizing: border-box; text-align: center; }
+
+	.Sobre .PrimeiraSessao::after { content: ''; width: 1px; height: 34px; background: #FFF; position: absolute; left: 50%; margin-left: -0.5px; bottom: 0; z-index: 1; }
+
+	.Sobre h1 { position: absolute; margin:0; top: 40%; padding: 0 180px; }
+	.Sobre h2 { position: relative; margin-top: 235px; top: 40%; font-size: 2.5rem; line-height: 5rem; }
+	.Sobre .PrimeiraSessao p { top: 40%; position: relative; margin-top: 37px; font-size: 1.5rem; line-height: 2.12rem; padding: 0 95px; }
+	
+	.Sobre .SegundaSessao .Wrapper { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding-top:110px; padding-bottom:80px; max-width: 1400px; margin: auto }
+	.Sobre .SegundaSessao .esq, .Sobre .SegundaSessao .dir { text-align: center; margin: auto; }
+	.Sobre .SegundaSessao .esq { max-width: 452px; }
+	.Sobre .SegundaSessao .esq p:first-child { max-width: 352px; margin: auto }
+	.Sobre .SegundaSessao .esq p:last-child { max-width: 410px; margin: auto }
+	.Sobre .SegundaSessao .dir p:first-child { max-width: 375px; margin: auto }
+	.Sobre .SegundaSessao .dir p:last-child { max-width: 210px; margin: auto }
+	.Sobre .SegundaSessao .Wrapper p:first-child { color: var(--principal); font-size: 2.18rem; line-height: 2.5rem; margin-bottom: 35px; font-family: 'OC Rey'; }
+
+	.Sobre .TerceiraSessao { padding-top: 70px }
+	.Sobre .TerceiraSessao p:first-child { font-size: 1.8rem; line-height: 2.5rem; text-transform: uppercase; font-family: 'OC Rey'; letter-spacing: 0.4rem; margin: auto; text-align: center; }
+
+	.Sobre .TerceiraSessao .TerceiraSessaoWrapper { padding-top: 95px; padding-bottom: 135px; margin: auto; max-width: 1400px; padding-left: 110px; padding-right: 110px; }	
+	.Sobre .TerceiraSessao img { max-width: 100%; }
+	.Sobre .TerceiraSessao .TerceiraSessaoWrapper p:first-of-type { font-family: 'OC Rey'; font-size: 1.8rem; line-height: 2rem; margin-top: 17px; color: #fff }
+	.Sobre .TerceiraSessao .TerceiraSessaoWrapper p:last-of-type { font-size: 1rem; line-height: 1.3rem; margin-top: 30px; color: var(--principal) }
+	.Sobre .TerceiraSessao .slick-slide { width: 273px }
+
+	.Sobre .TerceiraSessao .slick-list { margin: auto; display: block; }	
+	.Sobre .TerceiraSessao .slick-disabled { display: none!important; }
+
+	.Sobre .TerceiraSessao .sobreprev { cursor: pointer; left: 42px; background-image: url(../images/SetaSobre.svg); width: 27px; height: 54px; background-color: transparent; border: 0; background-repeat: no-repeat; position: absolute; top: 50%; margin-top: -27px; -moz-transform: rotate(180deg); -webkit-transform: rotate(180deg); -o-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); z-index: 5; }
+	.Sobre .TerceiraSessao .sobrenext { cursor: pointer; right: 42px; background-image: url(../images/SetaSobre.svg); width: 27px; height: 54px; background-color: transparent; border: 0; background-repeat: no-repeat; position: absolute; top: 50%; margin-top: -27px; z-index: 5; }
+
+	.Sobre .TerceiraSessaoWrapper .Box { margin-top: 50px; padding: 0 12.5px; display: flex!important; justify-content: center; }
+
+	.Popup { background-color: #877D74; padding: 69px 87px 42px 64px; min-height: 100%; height: initial; }
+	.Popup footer { display: none; }
+	.PopupWrapper { display: grid; grid-template-columns: auto auto; }
+	.Popup img { max-width: 207px; margin-right: 30px; }	
+	.Popup .Destaque { font-size: 2.18rem; color: var(--secundaria); font-family: 'OC Rey'; }
+	.Popup .Subtitulo { font-size: 1.25rem; margin-top: 25px; margin-bottom: 30px; }
+/* :Sobre */
+
+/* ChamaContato: */
+	.ChamaContato { background-color: var(--principal); height: 300px; width: 100%; color: var(--secundaria); display: grid; grid-template-columns: 50% 50%; }
+	.ChamaContato .esq { display: grid; align-items: center; }
+	.ChamaContato .dir { display: flex; align-items: center; justify-content: center; }
+	.ChamaContato .dir div { display: flex; align-items: center; justify-content: center; }
+	.ChamaContato .dir div p { font-size: 1.87rem; letter-spacing: 0.4rem; font-family: 'OC Rey'; color: var(--secundaria); }
+	.ChamaContato .dir p:first-child { margin-right: 45px; }
+/* :ChamaContato */
 
 /* -------------------------------- Versionamento Desktop: -------------------------------- */
 
@@ -301,9 +370,9 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 /* Header Desktop: */
 	header {}
 		header article {padding: 30px 0;}
-
 		header nav {text-align: right; padding: 5px;}
 			header nav a {padding: 10px 30px; display: inline-block;}
+			header .SessaoAtual div { border-bottom: 1px solid; padding-bottom: 6px; }
 
 		#Logo {width: 220px;}
 /* :Header Desktop */
@@ -338,6 +407,10 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	#FinalProximaPagina p {padding: 26px 0; width: 510px;}
 
 	.Home #FinalProximaPagina {background: url('../images/Grafismo03.svg') no-repeat right; background-size: 500px;}
+
+	.mfp-content { max-width: 1070px!important; max-height: 466px!important;  }
+	.mfp-iframe-scaler { height: 466px!important; padding-top: 0!important }
+	
 /* :Página Home Desktop */
 
 }
@@ -365,7 +438,7 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 		#Medio {top: 50%; margin-top: -0.5px;}
 		#Baixo {bottom: 0;}
 
-		.MenuAberto div {top: 50% !important; margin-top: 0 !important; background: #FFF !important;}
+		.MenuAberto div {top: 50% !important; margin-top: 0 !important; }
 
 		.MenuAberto #Topo {-ms-transform: rotate(45deg) !important; -webkit-transform: rotate(45deg) !important; transform: rotate(45deg) !important;}
 		.MenuAberto #Baixo, .MenuAberto #Medio {-ms-transform: rotate(-45deg) !important; -webkit-transform: rotate(-45deg) !important; transform: rotate(-45deg) !important;}
@@ -379,11 +452,12 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 		#LogoMenu {margin-top: 30px;}
 
 		#SegundoScroll .ConteudoHome h3 {border-bottom-width: 1px;}
-
-
 		.Expertises .PrimeiraSessao img { display: none; }
 
-
+		.PopupWrapper { grid-template-rows: auto auto; grid-template-columns: initial; }
+		.Popup .Destaque { font-size: 1.5rem; margin-top: 25px; text-align: center; }
+		.Popup .Subtitulo { font-size: 1.25rem; margin-top: 20px; margin-bottom: 40px; text-align: center; }
+		.Popup img { margin: 0 auto; max-width: 100%; }
 }
 
 /* -------------------------------- :Versionamento Tablet & Mobie --------------------------------- */
@@ -484,6 +558,38 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 
 /* :Expertises Tablet */
 
+/* Sobre Tablet: */
+	.Sobre h1 { padding: 0 }
+	.Sobre h2 { font-size: 1.5rem; line-height: 1.8rem; }
+	.Sobre .PrimeiraSessao { background-position-x: -105px; }
+	.Sobre .PrimeiraSessao::after { bottom: -17px }
+	.Sobre .PrimeiraSessao p { font-size: 1.12rem; line-height: 1.5rem; padding: 0 30px }
+
+	.Sobre .SegundaSessao .Wrapper p:first-child { font-size: 1.5rem; line-height: 1.8rem; max-width: 165px; }
+	.Sobre .SegundaSessao .Wrapper .esq p:first-child { max-width: 190px }
+	.Sobre .SegundaSessao .Wrapper p:last-child { font-size: 0.875rem; line-height: 1.25rem; max-width: 230px; }
+	.Sobre .SegundaSessao .Wrapper img { max-width: 32px; }
+	
+	.Sobre .TerceiraSessao { padding-top: 0 }
+	.Sobre .TerceiraSessao p:first-child { font-size: 1.12rem; line-height: 2.5rem; }
+	.Sobre .TerceiraSessao .TerceiraSessaoWrapper { padding-top: 20px; padding-bottom: 50px }
+	.Sobre .TerceiraSessao img { max-width: 137px }
+
+	.Sobre .TerceiraSessao .TerceiraSessaoWrapper p:first-of-type { font-size: 1.3rem; }
+	.Sobre .TerceiraSessao .TerceiraSessaoWrapper p:last-of-type { font-size: 0.87rem; margin-top: 18px; margin-top: 3px }
+	
+	.Sobre .TerceiraSessaoWrapper .Box { margin-top: 50px; display: flex!important; justify-content: center; }
+
+	.Popup { max-width: 444px; margin: auto; }
+	.Popup .Destaque, .Popup .Subtitulo { text-align: center; }
+	.PopupWrapper img { margin: auto }
+
+	.mfp-content { max-width: 444px!important; }
+	.mfp-iframe-scaler iframe { min-height: 1040px!important; padding-top: 0!important; margin-bottom: 50px }
+	.mfp-container { height: 0!important; }
+
+/* :Sobre Tablets */
+
 }
 
 /* -------------------------------- :Versionamento Tablet --------------------------------- */
@@ -568,13 +674,11 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	.Expertises .SegundaSessao .SliderWrapper p:first-of-type { font-size: 1.15rem; line-height: 1.5rem; letter-spacing: initial; margin-bottom: 45px }
 	.Expertises .SegundaSessao .Processo p:last-of-type { font-size: 1rem ; line-height: 1.5rem; padding: 0 50px }
 
-	.Expertises .SegundaSessao .Slider { grid-template-columns: 100%; }
-	
+	.Expertises .SegundaSessao .Slider { grid-template-columns: 100%; }	
 	.Expertises .SegundaSessao .Slider .wrapper div:first-of-type { line-height: 2.5rem; }
 	.Expertises .SegundaSessao .Slider .wrapper:nth-of-type(2) { margin: 0 }
 	.Expertises .SegundaSessao .Slider .wrapper div:nth-of-type(3) { padding: 0; margin-top: 45px }
 	.Expertises .slick-track div:last-child { font-family: 'Sarabun', sans-serif; font-size: 1rem }
-
 	.Expertises .slick-arrow { bottom: 30px; top: initial; z-index: 2; top: 75% }
 	.Expertises .slick-next { right: 30px; margin-top: -10px }
 	.Expertises .slick-next:before { content: url('../images/SetaSecundaria.svg') }
@@ -584,20 +688,64 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	.Expertises .SegundaSessao .Detalhe { margin-top: 110px }
 
 	.Expertises .TerceiraSessao { padding-top: 75px }
-	.Expertises .TerceiraSessao article { padding-top: 65px }
+	.Expertises .TerceiraSessao article { padding-top: 65px; padding-right: 0; }
 	.Expertises .TerceiraSessao p.Destaque { font-size: 1.25rem; line-height: 1.8rem; padding: 0 40px }
 	.Expertises .TerceiraSessao .Boxes { margin-top: 5px }
 
 	.Expertises .TerceiraSessao .Praticas .Wrapper { grid-template-columns: initial; grid-template-rows: 1fr auto 1fr; margin-top: 35px; padding: 0 55px }
 	.Expertises .TerceiraSessao .Praticas .Wrapper img { -ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); margin: auto; }
-
-
-	.Expertises .TerceiraSessao .Boxes { grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; margin: 0 }
 	
-	.Expertises .TerceiraSessao .Praticas { padding-top: 60px }
+	.Expertises .TerceiraSessao .Boxes { margin: 0; display: block; }	
+	.Expertises .TerceiraSessao .Boxes .Box { margin-right: 39px; padding-top: 25px }
+	.Expertises .TerceiraSessao .Box p { font-size: 0.8rem; }
+	.Expertises .TerceiraSessao .Box p strong { line-height: 1.2rem; }
+	.Expertises .TerceiraSessao .Boxes .Box:first-of-type { margin-left: -49px }
+	
+	.Expertises .TerceiraSessao .Praticas { padding-top: 60px; }
 	.Expertises .TerceiraSessao .Praticas::before { display: none; }
 
+	.Expertises .QuartaSessao { display: block; background-position-x: 937px; }
+	.Expertises .QuartaSessao a { letter-spacing: 0.2rem; font-size: 1.25rem; position: absolute; top: 68px; left: 50%; margin-left: -81px; }
+
+	.Expertises .QuartaSessao .MobileItem { background-image: url(../images/Grafismo09.svg); width: 835px; height: 370px; background-size: contain; background-position-x: -275px; background-position-y: 259px; background-repeat: no-repeat; }
+
 /* :Expertise Mobile */
+
+/* Sobre Mobile: */
+	.Sobre h1 { padding: 0 40px; top: 24% }  
+	.Sobre h2 { font-size: 1.25rem; line-height: 1.5rem; margin-top: 70px }
+	.Sobre .PrimeiraSessao p { margin-top: 55px; font-size: initial; line-height: initial; padding: 0 25px }
+	.Sobre .PrimeiraSessao::after { bottom: -17px }
+	
+	.Sobre .SegundaSessao .Wrapper { grid-template-rows: 1fr auto 1fr; grid-template-columns: initial; padding-top: 65px; padding-bottom: 85px; }
+	.Sobre .SegundaSessao .Wrapper img { -moz-transform: rotate(90deg); -webkit-transform: rotate(90deg);-o-transform: rotate(90deg);-ms-transform: rotate(90deg); transform: rotate(90deg); }
+	.Sobre .SegundaSessao .Wrapper div:nth-child(2) { margin: auto }
+	.Sobre .SegundaSessao .Wrapper p:first-child { padding: 0 40px }
+	.Sobre .SegundaSessao .Wrapper p:last-child { padding: 0 45px }
+
+	.Sobre .TerceiraSessao { padding-top: 0 }
+	.Sobre .TerceiraSessao p:first-child { font-size: 1.25rem }
+	.Sobre .TerceiraSessao .TerceiraSessaoWrapper { padding: 40px 15px }
+	.Sobre .TerceiraSessao .TerceiraSessaoWrapper p:first-of-type { font-size: 1rem; line-height: 1.6rem; }
+	.Sobre .TerceiraSessao .TerceiraSessaoWrapper p:last-of-type { font-size: 0.8rem; margin-top: 3px }
+	.Sobre .TerceiraSessaoWrapper .Box { max-width: 145px; margin-top: 20px; padding: 0 7.5px }
+
+	.ChamaContato .dir p:first-child, .ChamaContato .dir p:last-child { font-size: 1.25rem; line-height: 5rem; color: #fff }
+	.ChamaContato { display: block; position: relative; min-height: 370px; }
+	.ChamaContato .dir { position: absolute; top: 120px; left: 50%; right: 50%; }
+	.ChamaContato .dir div { margin-top: -25px }
+	.ChamaContato .dir p:first-child { margin-right: 23px; }
+	.ChamaContato .Mobile { position: absolute; bottom: 115px }
+
+	.Popup { padding: 77px 24px 33px 24px; }
+
+	.mfp-content { max-width: 255px!important; }
+	.mfp-iframe-scaler iframe { min-height: 1290px!important; padding-top: 0!important; margin-bottom: 50px }
+	.mfp-container { height: 0!important; }
+
+/* :Sobre Mobile */
+
+
 }
 
 @media screen and (max-width: 330px) { /* correções para o Iphone 5/SE */

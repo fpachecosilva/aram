@@ -61,7 +61,17 @@ jQuery(document).ready(function() {
 
 	// Funções executadas apenas na versão Desktop:
 		function DesktopVersion() {
-			//
+			
+			$('.TerceiraSessaoWrapper').slick({
+				infinite: false,
+				slidesToShow: 4,
+				fade: false,
+				arrows: true,
+				prevArrow: '<button type="button" class="sobreprev"></button>',
+				nextArrow: '<button type="button" class="sobrenext"></button>',
+				cssEase: 'linear'
+			});
+
 		}
 	// :Funções executadas apenas na versão Desktop
 
@@ -109,6 +119,14 @@ jQuery(document).ready(function() {
 		} else { 
 			$('.DesktopItem').css('display','block');
 			$('.MobileItem').css('display','none');
+			$('.Mobile').css('display','none');
+		}
+
+		if(WidthDevice <= 1029 && WidthDevice >=450) {
+			$('.Mobile').css('display','none');
+			$('.TabletItem').css('display','block');
+		} else {			
+			$('.TabletItem').css('display','none');
 		}
 
 
@@ -125,15 +143,44 @@ jQuery(document).ready(function() {
 				});
 			}
 
-			// $('.Boxes').slick({
-			// 	infinite: false,
-			// 	slidesToShow: 1,
-			// 	fade: false,
-			// 	arrows: false,				
-			// 	cssEase: 'linear'
-			// });	
+			$('.Boxes').slick({
+				infinite: true,
+				slidesToShow: 1,
+				fade: false,
+				arrows: false,
+				cssEase: 'linear',
+				centerMode: true,				
+				adaptiveHeight: false				
+			});	
+
+			$('.TerceiraSessaoWrapper').slick({
+				infinite: false,
+				slidesToShow: 2,
+				rows: 2,
+				fade: false,
+				arrows: false,
+				prevArrow: '<button type="button" class="sobreprev"></button>',
+				nextArrow: '<button type="button" class="sobrenext"></button>',
+				cssEase: 'linear'				
+			});
 
 		}
+
+		if(WidthDevice >= 450 && WidthDevice <= 1029 ) {
+			
+			$('.TerceiraSessaoWrapper').slick({
+				infinite: false,
+				slidesToShow: 2,
+				rows: 2,
+				fade: false,
+				arrows: true,
+				prevArrow: '<button type="button" class="sobreprev"></button>',
+				nextArrow: '<button type="button" class="sobrenext"></button>',
+				cssEase: 'linear'
+			});
+
+		}
+		
 		
 	// FadeIn da página após o carregamento.
 		$('body').fadeIn('slow');
@@ -154,6 +201,17 @@ jQuery(document).ready(function() {
 			//
 		}
 		else {}
+
+		if ($('body').hasClass('Sobre')) {
+			$('.popup-issuu').magnificPopup({
+				// disableOn: 700,
+				type: 'iframe',
+				mainClass: 'mfp-fade'
+			});
+		}
 		
+		if (WidthDevice < 450 && $('div').hasClass('ChamaContato')) {
+			$('.esq > .Mobile').addClass('MobileItem');
+		}
 
 });

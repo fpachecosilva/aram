@@ -13,3 +13,4 @@
 	<script type="text/javascript" src="<? echo $url ?>assets/javascript/jquery.js"></script>
 	<script type="text/javascript" src="<? echo $url ?>assets/javascript/slick.js"></script>
 	<script type="text/javascript" src="<? echo $url ?>assets/javascript/estrutura.js"></script>
+	<script type="text/javascript" src="<? echo $url ?>assets/javascript/jquery.magnific-popup.js"></script>
