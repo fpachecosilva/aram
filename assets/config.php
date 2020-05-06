@@ -19,7 +19,7 @@
 	// Páginas
 		$Expertises = $url.'expertises.php';
 		$Sobre = $url.'sobre.php';
-		$Documentos = $url.'contato.php';
+		$Documentos = $url.'documentos.php';
 		$Contato = $url.'contato.php';
 
 	// contato
@@ -34,7 +34,7 @@
 		$teltxt = '+55 11 2505 9293';
 		$tellink = 'tel:25059293';
 
-		$endereco = 'Av. Pres. Juscelino Kubitschek<span class="dot">•</span>180<span class="dot">•</span>17º andar<span class="dot">•</span>Cj. 172<span class="dot">•</span>Itaim Bibi<span class="dot">•</span>São Paulo<span class="dot">•</span>SP<span class="dot">•</span>Brasil<span class="dot">•</span>04543-000';
+		$endereco = 'Av. Pres. Juscelino Kubitschek<span class="dot">•</span>180<span class="dot">•</span>17º andar<br>Cj. 172<span class="dot">•</span>Itaim Bibi<br>São Paulo<span class="dot">•</span>SP<span class="dot">•</span>Brasil<span class="dot">•</span>04543-000';
 
 	// Location
 		//$waze = 'waze://?q='. $empresa;

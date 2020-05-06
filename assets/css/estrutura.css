@@ -123,12 +123,13 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 /* :Magnific Popup */
 
 /* Efeitos de transição: */
-	a, header, #AbrirMenu div, nav, {-webkit-transition: all var(--tempo); -moz-transition: all var(--tempo); -ms-transition: all var(--tempo); -o-transition: all var(--tempo); transition: all var(--tempo);}
+	a, header, #AbrirMenu div, nav, form a {-webkit-transition: all var(--tempo); -moz-transition: all var(--tempo); -ms-transition: all var(--tempo); -o-transition: all var(--tempo); transition: all var(--tempo);}
 /* :Efeitos de transição */
 
 /* Animações: */
 	@-webkit-keyframes float { from, to {transform: translate3d(0, 0, 0);} 50% {transform: translate3d(0, -20px, 0);}}
-	@keyframes float { from, to {transform: translate3d(0, 0, 0);} 50% {transform: translate3d(0, -20px, 0);}}
+	@keyframes float { from, to {transform: translate3d(0, 0, 0);} 50% {transform: translate3d(0, -20px, 0);}}	
+
 /* :Animações */
 
 /* Elementos: */
@@ -164,13 +165,52 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 /* :Backgrounds */
 	
 /* Header: */
-	header {position: absolute; top: 0; left: 0; width: 100%; z-index: 3;}
-	header article {position: relative; z-index: 10; padding: 0;}
-	
-		header a {font-size: 0.8rem; color: #FFF; text-transform: uppercase; letter-spacing: 2.1px;}
+	header {position: fixed; top: 0; left: 0; width: 100%; z-index: 3;}
+	header article {position: relative; z-index: 10; padding: 0;}	
+	header a {font-size: 0.8rem; color: #FFF; text-transform: uppercase; letter-spacing: 2.1px;}
 
-		#Logo {display: block; float: left;}
-		#Logo img {width: 100%;}
+	#Logo {display: block; float: left;}
+	#Logo img {width: 100%;}
+	
+	.bg {background-color: var(--principal)}
+
+	#AbrirMenu {position: absolute; width: 25px; height: 18px; z-index: 3;}
+	#AbrirMenu div {width: 100%; position: absolute; display: block; height: 1px; background: var(--secundaria)}
+
+	#Topo {top: 0;}
+	#Medio {top: 50%; margin-top: -0.5px;}
+	#Baixo {bottom: 0;}
+
+	.MenuAberto div {top: 50% !important; margin-top: 0 !important; }
+	.MenuAberto #Topo, .MenuAberto #Medio, .MenuAberto #Baixo  { background-color: #fff; }
+	.MenuAberto #Topo {-ms-transform: rotate(45deg) !important; -webkit-transform: rotate(45deg) !important; transform: rotate(45deg) !important;}
+	.MenuAberto #Baixo, .MenuAberto #Medio {-ms-transform: rotate(-45deg) !important; -webkit-transform: rotate(-45deg) !important; transform: rotate(-45deg) !important;}
+
+	nav {background: var(--secundaria); position: fixed; top: 0; right: -100%; padding: 10px 20px; height: 100%; box-sizing: border-box; z-index: 2;}
+	nav a {display: block; clear: both; width: 150px; padding: 15px 0; box-sizing: border-box; border-bottom: 1px solid #FFF;}
+	nav a:last-of-type {border-bottom: 0 !important;}
+
+	nav.MenuAberto {right: 0;}
+
+	#LogoMenu {margin-top: 30px;}
+	#AbrirMenu {position: absolute; width: 25px; height: 18px; z-index: 3;}
+	#AbrirMenu div {width: 100%; position: absolute; display: block; height: 1px; background: var(--secundaria)}
+
+	#ClicarForaMenu {display: none; cursor: default; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;}
+
+	/* Header Tablet: */
+		header {}
+		header article {margin: 25px auto;}
+
+		#Logo {width: 160px;}
+
+		#AbrirMenu {top: 10px; right: 0;}
+
+		nav {min-width: 265px; width: 35%;}
+		#LogoMenu {width: 100px;}
+
+		.Navegador {left: -30px;}
+	/* :Header Tablet */
 
 /* :Header */
 
@@ -201,7 +241,8 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 
 	#PrimeiroScroll:after {content: ''; width: 1px; height: 34px; background: #FFF; position: absolute; bottom: -17px; left: 50%; margin-left: -0.5px;}
 
-	#SliderHome {top: 50%; left: 50%; text-align: center; margin-top: 150px;}
+	#SliderHome {top: 50%; left: 50%; text-align: center; margin-top: 150px; }
+	
 
 	.slick-next:before {content: url('../images/Seta.svg');}
 	.slick-prev:before {content: url('../images/Seta.svg');}
@@ -324,7 +365,7 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	.Sobre .TerceiraSessao .TerceiraSessaoWrapper { padding-top: 95px; padding-bottom: 135px; margin: auto; max-width: 1400px; padding-left: 110px; padding-right: 110px; }	
 	.Sobre .TerceiraSessao img { max-width: 100%; }
 	.Sobre .TerceiraSessao .TerceiraSessaoWrapper p:first-of-type { font-family: 'OC Rey'; font-size: 1.8rem; line-height: 2rem; margin-top: 17px; color: #fff }
-	.Sobre .TerceiraSessao .TerceiraSessaoWrapper p:last-of-type { font-size: 1rem; line-height: 1.3rem; margin-top: 30px; color: var(--principal) }
+	.Sobre .TerceiraSessao .TerceiraSessaoWrapper p:last-of-type { font-size: 1rem; line-height: 1.3rem; margin-top: 15px; color: var(--principal) }
 	.Sobre .TerceiraSessao .slick-slide { width: 273px }
 
 	.Sobre .TerceiraSessao .slick-list { margin: auto; display: block; }	
@@ -343,6 +384,24 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	.Popup .Subtitulo { font-size: 1.25rem; margin-top: 25px; margin-bottom: 30px; }
 /* :Sobre */
 
+/* Documentos: */
+	.Documentos .PrimeiraSessao { background-color: #877D74; padding-top: 214px; padding-bottom: 165px; }
+	.Documentos p { font-size: 1.25rem; line-height: 1.6rem; }
+	.Documentos .Wrapper { display: grid; grid-template-columns: 50% 50%; padding: 0 150px 0 125px; margin: auto; max-width: 1080px; }
+	.Documentos .PrimeiraSessao .esq { max-width: 310px; }
+	.Documentos .PrimeiraSessao .dir { position: relative; }
+	.Documentos .PrimeiraSessao .dir p { margin-left: 28px }
+	.Documentos .PrimeiraSessao .dir .BoxDir { height: 125px; display: grid; align-items: center; grid-template-columns: auto 1fr; max-width: 425px; position: absolute; right: 0; }
+	.Documentos .PrimeiraSessao .dir .BoxDir span { content: ''; display: block; height: 100%; width: 1px; background-color: #fff; }
+
+	.Documentos h2 { font-size: 1.8rem; line-height: 2.5rem; letter-spacing: 0.4rem; text-transform: uppercase; margin-bottom: 50px }
+	.Documentos .Box { display: grid; grid-template-columns: auto auto 1fr; margin-bottom: 40px; max-width: 310px; align-items: end; }
+	.Documentos .Box::before { content: '';	background-image: url(../images/Download.svg); display: block; width: 47px;	height: 42px; }
+	.Documentos .Box p { color: #fff }
+	.Documentos .Box span { content: ''; display: block; height: 42px; width: 1px; background-color: #fff; margin-left: 35px; margin-right: 18px; }
+	.Documentos .Box a { color: #fff; display: block; height: 42px; width: auto; }
+/* :Documentos */
+
 /* ChamaContato: */
 	.ChamaContato { background-color: var(--principal); height: 300px; width: 100%; color: var(--secundaria); display: grid; grid-template-columns: 50% 50%; }
 	.ChamaContato .esq { display: grid; align-items: center; }
@@ -351,6 +410,29 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	.ChamaContato .dir div p { font-size: 1.87rem; letter-spacing: 0.4rem; font-family: 'OC Rey'; color: var(--secundaria); }
 	.ChamaContato .dir p:first-child { margin-right: 45px; }
 /* :ChamaContato */
+
+
+/* Contato: */
+	.Contato .PrimeiraSessao { background: url('../images/montanhas_3.jpg'); background-size: cover; }
+	.Contato .PrimeiraSessao p { position: relative; margin: auto; margin-top: 190px; top: 44%; text-align: center; padding: 0 130px; font-size: 1.5rem; line-height: 2.12rem; }
+	.Contato .PrimeiraSessao article { height: 100%; max-width: 1050px }
+	.Contato .PrimeiraSessao h1 { top: 44% }
+	.Contato .PrimeiraSessao::after { content: ''; width: 1px; height: 34px; background: #FFF; position: absolute; left: 50%; margin-left: -0.5px; bottom: 0; z-index: 1; }
+	
+	.Contato .SegundaSessao { display: grid; grid-template-columns: 360px 245px auto; padding: 125px; justify-content: center; }
+	.Contato .SegundaSessao h2 { margin-bottom: 70px }
+	.Contato .SegundaSessao img { padding: 0 100px; margin-top: 110px }
+
+	form { width: 360px; color: #fff }	
+	input { width: 100%; height: 50px; border: 1px solid #877D74; background-color: rgba(255, 255, 255, 0.1); margin-bottom: 20px; font-size: 0.8rem; line-height: 1.12rem; color: #fff; padding-left: 10px}
+	textarea { width: 100%; height: 138px; border: 1px solid #877D74; background-color: rgba(255, 255, 255, 0.1); margin-bottom: 20px; font-size: 0.8rem; line-height: 1.12rem; color: #fff; padding-left: 10px; padding-top: 10px }
+	::placeholder { font-size: 0.8rem; line-height: 1.12rem; color: #fff; font-family: 'Sarabun'; }
+	::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder { color: #fff }
+	form a { width: 167px; height: 45px; border: 1px solid var(--principal); display: block; text-align: center; line-height: 2.6; }
+	form a:hover { background-color: var(--principal); color: var(--secundaria) }
+	iframe { max-width: 100%; }
+
+/* :Contato */
 
 /* -------------------------------- Versionamento Desktop: -------------------------------- */
 
@@ -368,13 +450,13 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 /* :Elementos Desktop */
 
 /* Header Desktop: */
-	header {}
+	/* header {}
 		header article {padding: 30px 0;}
 		header nav {text-align: right; padding: 5px;}
 			header nav a {padding: 10px 30px; display: inline-block;}
 			header .SessaoAtual div { border-bottom: 1px solid; padding-bottom: 6px; }
 
-		#Logo {width: 220px;}
+		#Logo {width: 220px;} */
 /* :Header Desktop */
 
 /* Footer Desktop: */
@@ -393,6 +475,7 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	#SegundoScroll .ConteudoHome {width: 510px;}
 
 	#SegundoScroll .Detalhe {width: 1100px; margin-top: 100px;}
+
 	#SegundoScroll .Navegador {top: 132px; margin-top: 0;}
 
 	#TerceiroScroll {padding-bottom: 100px;}
@@ -426,7 +509,7 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	.DesktopItem {display: none !important;}
 	.MobileItem {display: inline-block !important;}
 
-	#ClicarForaMenu {display: none; cursor: default; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;}
+	
 
 	header {position: fixed;}
 		.bg {background-color: var(--principal)}
@@ -444,6 +527,9 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 		.MenuAberto #Baixo, .MenuAberto #Medio {-ms-transform: rotate(-45deg) !important; -webkit-transform: rotate(-45deg) !important; transform: rotate(-45deg) !important;}
 
 		nav {background: var(--secundaria); position: fixed; top: 0; right: -100%; padding: 10px 20px; height: 100%; box-sizing: border-box; z-index: 2;}
+
+		nav {min-width: 265px; width: 50%;}
+
 		nav a {display: block; clear: both; width: 150px; padding: 15px 0; box-sizing: border-box; border-bottom: 1px solid #FFF;}
 		nav a:last-of-type {border-bottom: 0 !important;}
 
@@ -463,6 +549,26 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 /* -------------------------------- :Versionamento Tablet & Mobie --------------------------------- */
 
 
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* -------------------------------- Versionamento Tablet: --------------------------------- */	
 
 @media screen and (max-width: 1029px) and (min-width: 451px) { 
@@ -475,20 +581,6 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	h5 {}
 	article {padding: 25px; max-width: 600px; margin: 0 auto;}
 /* :Elementos Tablet */
-
-/* Header Tablet: */
-	header {}
-		header article {margin: 25px auto;}
-
-		#Logo {width: 160px;}
-
-		#AbrirMenu {top: 10px; right: 0;}
-
-		nav {min-width: 265px; width: 50%;}
-		#LogoMenu {width: 100px;}
-
-		.Navegador {left: -30px;}
-/* :Header Tablet */
 
 /* Footer Tablet: */
 	footer article {padding: 25px;}
@@ -576,7 +668,7 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	.Sobre .TerceiraSessao img { max-width: 137px }
 
 	.Sobre .TerceiraSessao .TerceiraSessaoWrapper p:first-of-type { font-size: 1.3rem; }
-	.Sobre .TerceiraSessao .TerceiraSessaoWrapper p:last-of-type { font-size: 0.87rem; margin-top: 18px; margin-top: 3px }
+	.Sobre .TerceiraSessao .TerceiraSessaoWrapper p:last-of-type { font-size: 0.87rem; margin-top: 18px; margin-top: -3px }
 	
 	.Sobre .TerceiraSessaoWrapper .Box { margin-top: 50px; display: flex!important; justify-content: center; }
 
@@ -587,8 +679,41 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	.mfp-content { max-width: 444px!important; }
 	.mfp-iframe-scaler iframe { min-height: 1040px!important; padding-top: 0!important; margin-bottom: 50px }
 	.mfp-container { height: 0!important; }
-
 /* :Sobre Tablets */
+
+/* Documentos Tablets: */
+	.Documentos .PrimeiraSessao { padding-top: 110px; min-height: 584px; }
+
+	.Documentos .Wrapper { height: 500px; display: block; position: relative; padding: 0 80px }
+
+	.Documentos .PrimeiraSessao h2 { font-size: 1.12rem }
+	.Documentos p { font-size: 1rem; line-height: 1.3rem; }
+	
+	.Documentos .PrimeiraSessao .esq { }
+
+	.Documentos .Wrapper a { display: inline-block; min-width: 265px; }
+	.Documentos .Wrapper a:nth-child(6) { position: absolute; right: 80px; top: 90px }
+	.Documentos .Wrapper a:nth-child(7) { position: absolute; right: 80px; top: 172px }
+	.Documentos .Wrapper a:nth-child(8) { position: absolute; right: 80px; top: 254px }
+	
+	.Documentos .PrimeiraSessao .dir { position: absolute; width: 100% }
+	.Documentos .PrimeiraSessao .dir .BoxDir { max-width: 425px; margin-top: 85px; position: absolute; left: 0; margin-bottom: 125px; height: initial }
+/* :Documentos Tablets */
+
+/* Contato Tablets: */
+	.Contato .PrimeiraSessao p { font-size: 1.12rem; line-height: 1.4rem; padding: 0 100px; }
+	.Contato .PrimeiraSessao::after { bottom: -17px }
+
+	.Contato .SegundaSessao { display: block; text-align: center; padding-bottom: 80px; }
+	.Contato .SegundaSessao h2 { margin-bottom: 50px }
+	.Contato .SegundaSessao img { display: none; }
+	form { margin: auto; margin-bottom: 65px }
+	form a { margin: auto; }
+
+	iframe { width: 456px; }
+
+
+/* :Contato Tablets */
 
 }
 
@@ -727,7 +852,7 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	.Sobre .TerceiraSessao p:first-child { font-size: 1.25rem }
 	.Sobre .TerceiraSessao .TerceiraSessaoWrapper { padding: 40px 15px }
 	.Sobre .TerceiraSessao .TerceiraSessaoWrapper p:first-of-type { font-size: 1rem; line-height: 1.6rem; }
-	.Sobre .TerceiraSessao .TerceiraSessaoWrapper p:last-of-type { font-size: 0.8rem; margin-top: 3px }
+	.Sobre .TerceiraSessao .TerceiraSessaoWrapper p:last-of-type { font-size: 0.75rem; margin-top: -4px; }
 	.Sobre .TerceiraSessaoWrapper .Box { max-width: 145px; margin-top: 20px; padding: 0 7.5px }
 
 	.ChamaContato .dir p:first-child, .ChamaContato .dir p:last-child { font-size: 1.25rem; line-height: 5rem; color: #fff }
@@ -744,6 +869,30 @@ body {display: none; font-family: 'Sarabun', sans-serif; box-sizing: border-box;
 	.mfp-container { height: 0!important; }
 
 /* :Sobre Mobile */
+
+/* Documentos Mobile: */
+	.Documentos .PrimeiraSessao { padding-top: 148px; padding-bottom: 50px }	
+	.Documentos .Wrapper { padding: 0 25px; grid-template-columns: initial; display: block; }
+	.Documentos h2 { margin-bottom: 45px; }
+	.Documentos .Box::before { background-size: 40px; background-repeat: no-repeat; }
+	.Documentos .Box span { margin: 0 15px; }
+	.Documentos p {  font-size: 1rem; line-height: 1.3rem; }
+	.Documentos .PrimeiraSessao .dir .BoxDir { position: initial; padding-top: 10px }
+/* :Documentos Mobile */
+
+/* Contato Mobile: */
+	.Contato .PrimeiraSessao h1 { padding: 0 40px }
+	.Contato .PrimeiraSessao p { font-size: initial; line-height: 1.5rem; padding: 0 }
+	.Contato .PrimeiraSessao::after { bottom: -17px }
+
+	.Contato .SegundaSessao { padding: 75px 0 60px 0; display: block; }
+	.Contato .SegundaSessao img { display: none; }
+	.Contato .SegundaSessao h2 { font-size: 1.8rem; line-height: 2.5rem; margin-bottom: 50px; text-align: center; }
+
+	form { width: 100%; margin: auto; max-width: 100%; padding: 0 60px; box-sizing: border-box; }	
+	form a { margin: auto; margin-bottom: 75px }	
+	input { width: 100%; }	
+/* :Contato Mobile */
 
 
 }

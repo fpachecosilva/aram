@@ -75,37 +75,38 @@ jQuery(document).ready(function() {
 		}
 	// :Funções executadas apenas na versão Desktop
 
+
+	// Menu
+		function FecharMenu() {
+			$('.MenuAberto').removeClass('MenuAberto');
+			$('#ClicarForaMenu').hide();
+		}
+
+		$('#ClicarForaMenu').click(function() {FecharMenu()});
+
+		$('#AbrirMenu').click(function() {
+			if($(this).hasClass('MenuAberto')) {
+				FecharMenu();
+			} else {
+				$(this).addClass('MenuAberto');
+				$('nav').addClass('MenuAberto');
+				$('#ClicarForaMenu').show();
+			}
+		});
+
+		// Colocando BG no header
+		$(window).scroll(function(event) {
+			PosicaoScrollAtual = $(window).scrollTop();
+
+			if(PosicaoScrollAtual <= heightDevice/4) {
+				$('.bg').removeClass('bg');
+			} else {
+				$('header').addClass('bg');
+			}
+		});
+
 	// Funções executadas apenas na versão Mobile:
-		function MobileVersion() {
-
-			// Colocando BG no header
-				$(window).scroll(function(event) {
-					PosicaoScrollAtual = $(window).scrollTop();
-
-					if(PosicaoScrollAtual <= heightDevice/4) {
-						$('.bg').removeClass('bg');
-					} else {
-						$('header').addClass('bg');
-					}
-				});
-
-			// Menu
-				function FecharMenu() {
-					$('.MenuAberto').removeClass('MenuAberto');
-					$('#ClicarForaMenu').hide();
-				}
-
-				$('#ClicarForaMenu').click(function() {FecharMenu()});
-
-				$('#AbrirMenu').click(function() {
-					if($(this).hasClass('MenuAberto')) {
-						FecharMenu();
-					} else {
-						$(this).addClass('MenuAberto');
-						$('nav').addClass('MenuAberto');
-						$('#ClicarForaMenu').show();
-					}
-				});
+		function MobileVersion() {			
 
 		}
 	// :Funções executadas apenas na versão Mobile
@@ -124,9 +125,9 @@ jQuery(document).ready(function() {
 
 		if(WidthDevice <= 1029 && WidthDevice >=450) {
 			$('.Mobile').css('display','none');
-			$('.TabletItem').css('display','block');
+			$('.TabletItem').css('display','block');			
 		} else {			
-			$('.TabletItem').css('display','none');
+			$('.TabletItem').css('display','none');			
 		}
 
 
@@ -194,7 +195,10 @@ jQuery(document).ready(function() {
 				infinite: true,
 				slidesToShow: 1,
 				fade: true,
-				cssEase: 'linear'
+				cssEase: 'ease-in-out',
+				speed: 2000,				
+				autoplay: true,
+  				autoplaySpeed: 4000
 			});
 
 		} else if($('body').hasClass('Home')) { // Página Dois

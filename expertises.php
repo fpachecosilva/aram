@@ -168,7 +168,7 @@
 
                     <div class="Box">
                         <p><strong>Controle, execução e suporte operacional:</strong></p>
-                        <p>controle mensal dos relatórios das instituições<br> e das movimentações,<br> abertura de contas,<br> movimentação e<br> realocações</p>
+                        <p>controle mensal dos relatórios das instituições e das movimentações,<br> abertura de contas,<br> movimentação e<br> realocações</p>
                         <p>05</p>
                     </div>
 
