@@ -2,10 +2,8 @@
 		<article>
 			<a href="<? echo $url ?>" title="<? echo $empresa ?>" alt="<? echo $empresa ?>" id="Logo">
 
-
-			<? echo '<img src="' .$images. 'logo.svg" title=" '. $empresa .'" alt=" '.$empresa.'" />' ?>
-
-
+				<? echo '<img src="' .$images. 'logo.svg" title=" '. $empresa .'" alt=" '.$empresa.'" />' ?>
+				
 			</a>
 
 			<a href="javascript:void(0)" id="ClicarForaMenu"></a>
